@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prestige Gifts - Unique Presents for Every Occasion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+        
+        :root {
+            --primary: #8B5FBF;
+            --secondary: #FFA630;
+            --accent: #D7E8BA;
+            --dark: #2E2D4D;
+            --light: #F8F4F9;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark);
+            background-color: var(--light);
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(46, 45, 77, 0.7), rgba(46, 45, 77, 0.7)), 
+                        url('https://placehold.co/1600x900') no-repeat center center/cover;
+            min-height: 80vh;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .category-card {
+            transition: all 0.3s ease;
+        }
+        
+        .category-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .cart-btn {
+            transition: all 0.3s ease;
+        }
+        
+        .cart-btn:hover {
+            background-color: var(--dark);
+            color: white;
+        }
+        
+        .nav-link:hover {
+            color: var(--secondary);
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                min-height: 60vh;
+            }
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+    <!-- Top Announcement Bar -->
+    <div class="bg-amber-100 text-amber-900 py-2 px-4 text-center text-sm">
+        <p>🎁 Free shipping on orders over $50 | Use code: GIFTS10 for 10% off</p>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <h1 class="text-2xl font-bold text-indigo-800">Prestige<span class="text-purple-600">Gifts</span></h1>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-6">
+                        <a href="#" class="nav-link text-gray-800 hover:text-purple-600 px-3 py-2 text-sm font-medium">Home</a>
+                        <a href="#" class="nav-link text-gray-800 hover:text-purple-600 px-3 py-2 text-sm font-medium">Shop</a>
+                        <a href="#" class="nav-link text-gray-800 hover:text-purple-600 px-3 py-2 text-sm font-medium">Categories</a>
+                        <a href="#" class="nav-link text-gray-800 hover:text-purple-600 px-3 py-2 text-sm font-medium">Occasions</a>
+                        <a href="#" class="nav-link text-gray-800 hover:text-purple-600 px-3 py-2 text-sm font-medium">About</a>
+                    </div>
+                </div>
+                
+                <!-- Icons -->
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="text-gray-700 hover:text-purple-600">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <a href="#" class="text-gray-700 hover:text-purple-600">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <a href="#" class="text-gray-700 hover:text-purple-600 relative">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="absolute -top-2 -right-2 bg-purple-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">3</span>
+                    </a>
+                    <button class="md:hidden text-gray-700 hover:text-purple-600">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero-section flex items-center justify-center text-white">
+        <div class="text-center px-4 max-w-3xl">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">Thoughtful Gifts for Every Occasion</h1>
+            <p class="text-xl mb-8">Discover carefully curated gifts that will make your loved ones feel special</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full transition duration-300">
+                    Shop Now
+                </button>
+                <button class="bg-transparent border-2 border-white hover:bg-white hover:text-purple-600 text-white font-bold py-3 px-8 rounded-full transition duration-300">
+                    View Collection
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Featured Categories -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Shop By Category</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="category-card text-center p-4 rounded-lg bg-gray-50">
+                    <div class="w-32 h-32 mx-auto mb-4 overflow-hidden rounded-full">
+                        <img src="https://placehold.co/300x300" alt="Stylish bottle of premium whiskey with gift box on wooden table" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-bold mb-2">For Him</h3>
+                    <a href="#" class="text-purple-600 text-sm font-medium">Shop Now →</a>
+                </div>
+                
+                <div class="category-card text-center p-4 rounded-lg bg-gray-50">
+                    <div class="w-32 h-32 mx-auto mb-4 overflow-hidden rounded-full">
+                        <img src="https://placehold.co/300x300" alt="Luxury scented candle with roses and ribbon gift packaging" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-bold mb-2">For Her</h3>
+                    <a href="#" class="text-purple-600 text-sm font-medium">Shop Now →</a>
+                </div>
+                
+                <div class="category-card text-center p-4 rounded-lg bg-gray-50">
+                    <div class="w-32 h-32 mx-auto mb-4 overflow-hidden rounded-full">
+                        <img src="https://placehold.co/300x300" alt="Colorful childrens toys including stuffed animals and wooden blocks with gift wrap" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-bold mb-2">For Kids</h3>
+                    <a href="#" class="text-purple-600 text-sm font-medium">Shop Now →</a>
+                </div>
+                
+                <div class="category-card text-center p-4 rounded-lg bg-gray-50">
+                    <div class="w-32 h-32 mx-auto mb-4 overflow-hidden rounded-full">
+                        <img src="https://placehold.co/300x300" alt="Elegant wine glasses and gourmet cheese board with decorative gift wrapping" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-bold mb-2">Gourmet Gifts</h3>
+                    <a href="#" class="text-purple-600 text-sm font-medium">Shop Now →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Featured Products -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-12">
+                <h2 class="text-3xl font-bold">Featured Products</h2>
+                <div class="flex space-x-2 mt-4 md:mt-0">
+                    <button class="bg-purple-600 text-white px-4 py-2 rounded-l-full">All</button>
+                    <button class="bg-white text-gray-700 px-4 py-2">New</button>
+                    <button class="bg-white text-gray-700 px-4 py-2">Bestsellers</button>
+                    <button class="bg-white text-gray-700 px-4 py-2 rounded-r-full">Sale</button>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Product 1 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="relative">
+                        <img src="https://placehold.co/600x600" alt="Handmade leather journal with embossed cover and ribbon bookmark" class="w-full h-64 object-cover">
+                        <div class="absolute top-2 right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">SALE</div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-lg">Premium Leather Journal</h3>
+                            <div>
+                                <span class="text-purple-600 font-bold">$39.99</span>
+                                <span class="text-gray-500 text-sm line-through ml-2">$49.99</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center mb-3 text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span class="text-gray-500 text-sm ml-1">(128)</span>
+                        </div>
+                        <button class="cart-btn w-full border border-purple-600 text-purple-600 py-2 rounded-full font-medium">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="relative">
+                        <img src="https://placehold.co/600x600" alt="Ceramic pour over coffee maker with wooden handle and linen packaging" class="w-full h-64 object-cover">
+                        <div class="absolute top-2 right-2 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">NEW</div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-lg">Artisan Coffee Set</h3>
+                            <div>
+                                <span class="text-purple-600 font-bold">$59.99</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center mb-3 text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span class="text-gray-500 text-sm ml-1">(87)</span>
+                        </div>
+                        <button class="cart-btn w-full border border-purple-600 text-purple-600 py-2 rounded-full font-medium">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="relative">
+                        <img src="https://placehold.co/600x600" alt="Custom engraved silver necklace in velvet gift box with LED lights" class="w-full h-64 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-lg">Personalized Necklace</h3>
+                            <div>
+                                <span class="text-purple-600 font-bold">$45.99</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center mb-3 text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="text-gray-500 text-sm ml-1">(215)</span>
+                        </div>
+                        <button class="cart-btn w-full border border-purple-600 text-purple-600 py-2 rounded-full font-medium">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="relative">
+                        <img src="https://placehold.co/600x600" alt="Luxury wooden watch with modern minimalist design on marble surface" class="w-full h-64 object-cover">
+                        <div class="absolute top-2 right-2 bg-purple-500 text-white text-xs font-bold px-2 py-1 rounded-full">BESTSELLER</div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-lg">Wooden Watch</h3>
+                            <div>
+                                <span class="text-purple-600 font-bold">$89.99</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center mb-3 text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span class="text-gray-500 text-sm ml-1">(342)</span>
+                        </div>
+                        <button class="cart-btn w-full border border-purple-600 text-purple-600 py-2 rounded-full font-medium">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white font-bold py-3 px-8 rounded-full transition duration-300">
+                    View All Products
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Special Offer -->
+    <section class="py-16 bg-purple-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <h2 class="text-3xl font-bold mb-4">Special Limited Time Offer</h2>
+                    <p class="text-lg mb-6">Get 20% off all orders over $100 this week only. Use code <span class="font-bold">GIFTLOVE20</span> at checkout.</p>
+                    <p class="text-sm text-purple-200">Offer valid until June 30, 2023.</p>
+                    <button class="bg-white text-purple-600 hover:bg-purple-100 font-bold py-3 px-8 rounded-full transition duration-300 mt-6">
+                        Shop the Sale
+                    </button>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/800x500" alt="Assortment of beautifully wrapped gifts with handmade brown paper, twine and evergreen sprigs" class="w-full rounded-lg shadow-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">What Our Customers Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://placehold.co/100x100" alt="Smiling woman in her 30s with curly brown hair wearing a blue sweater" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Sarah Johnson</h4>
+                            <div class="flex text-yellow-400 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"The personalized necklace I ordered was absolutely perfect! The craftsmanship is amazing and it arrived beautifully packaged. Will definitely shop here again."</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://placehold.co/100x100" alt="Smiling middle-aged man with glasses wearing a checkered shirt" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Michael Chen</h4>
+                            <div class="flex text-yellow-400 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"The wooden watch I got for my brother's birthday was a huge hit! The quality exceeded my expectations and customer service was extremely helpful with the engraving."</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://placehold.co/100x100" alt="Young woman with blonde hair smiling and wearing a white dress" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Emma Rodriguez</h4>
+                            <div class="flex text-yellow-400 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"Found the perfect anniversary gift for my parents. The shipping was fast and it came with a beautiful handwritten note, which was such a nice personal touch."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Gift Ideas Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Gift Ideas For Any Occasion</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <a href="#" class="group">
+                    <div class="h-40 overflow-hidden rounded-lg relative">
+                        <img src="https://placehold.co/600x400" alt="Romantic couple with champagne and rose petals celebrating anniversary" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                            <h3 class="text-white font-bold text-lg">Anniversary</h3>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="#" class="group">
+                    <div class="h-40 overflow-hidden rounded-lg relative">
+                        <img src="https://placehold.co/600x400" alt="Colorful birthday cake with balloons and wrapped presents in background" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                            <h3 class="text-white font-bold text-lg">Birthday</h3>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="#" class="group">
+                    <div class="h-40 overflow-hidden rounded-lg relative">
+                        <img src="https://placehold.co/600x400" alt="Christmas tree with gifts underneath and festive decorations in warm lighting" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                            <h3 class="text-white font-bold text-lg">Christmas</h3>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="#" class="group">
+                    <div class="h-40 overflow-hidden rounded-lg relative">
+                        <img src="https://placehold.co/600x400" alt="Graduation cap and diploma on wooden table with confetti in gold and blue colors" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                            <h3 class="text-white font-bold text-lg">Graduation</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Newsletter -->
+    <section class="py-16 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-4">Subscribe to Our Newsletter</h2>
+            <p class="text-lg mb-8">Get exclusive offers, gift ideas, and early access to new products</p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <input type="email" placeholder="Enter your email" class="flex-grow px-4 py-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-600">
+                <button class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 whitespace-nowrap">
+                    Subscribe
+                </button>
+            </div>
+            <p class="text-xs text-gray-500 mt-4">We respect your privacy. Unsubscribe at any time.</p>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Prestige Gifts</h3>
+                    <p class="text-gray-400 mb-4">Bringing joy through thoughtful gifts since 2015</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Shop</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">All Products</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">New Arrivals</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Bestsellers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Sale Items</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Help</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">FAQs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Shipping</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Returns</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm">© 2023 Prestige Gifts. All rights reserved.</p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <img src="https://placehold.co/100x30" alt="Visa credit card logo" class="h-8">
+                        <img src="https://placehold.co/100x30" alt="Mastercard credit card logo" class="h-8">
+                        <img src="https://placehold.co/100x30" alt="American Express credit card logo" class="h-8">
+                        <img src="https://placehold.co/100x30" alt="PayPal payment method logo" class="h-8">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Mobile Menu (Hidden by default) -->
+    <div class="fixed inset-0 bg-black bg-opacity-90 z-50 hidden mobile-menu">
+        <div class="flex justify-end p-4">
+            <button class="text-white text-3xl close-menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="text-white text-center mt-8">
+            <a href="#" class="block py-4 text-2xl">Home</a>
+            <a href="#" class="block py-4 text-2xl">Shop</a>
+            <a href="#" class="block py-4 text-2xl">Categories</a>
+            <a href="#" class="block py-4 text-2xl">Occasions</a>
+            <a href="#" class="block py-4 text-2xl">About</a>
+        </nav>
+    </div>
+    
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const menuButton = document.querySelector('.flex button.md\\:hidden');
+            const closeButton = document.querySelector('.close-menu');
+            
+            menuButton.addEventListener('click', function() {
+                mobileMenu.classList.remove('hidden');
+            });
+            
+            closeButton.addEventListener('click', function() {
+                mobileMenu.classList.add('hidden');
+            });
+            
+            // Simulate adding to cart
+            const addToCartButtons = document.querySelectorAll('.cart-btn');
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const originalText = button.innerText;
+                    button.innerHTML = '<i class="fas fa-check mr-2"></i>Added';
+                    button.classList.add('bg-purple-600', 'text-white');
+                    button.classList.remove('text-purple-600');
+                    
+                    setTimeout(() => {
+                        button.innerHTML = originalText;
+                        button.classList.remove('bg-purple-600', 'text-white');
+                        button.classList.add('text-purple-600');
+                    }, 2000);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
